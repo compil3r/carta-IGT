@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostila HTML e CSS - Carta de Presentes</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" onerror="this.onerror=null;this.href='';">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="memoji-header.webp" alt="Memoji" class="memoji-header">
+        <h1>📚 Apostila HTML e CSS</h1>
+        <p class="subtitulo-header">Aprenda a criar páginas web incríveis!</p>
+    </header>
+
+    <nav class="menu-container">
+        <button class="menu-hamburguer" id="menuToggle" onclick="toggleMenu()" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-navegacao" id="menuNav">
+            <a href="#comecar" onclick="fecharMenu()">Como Começar</a>
+            <a href="#introducao" onclick="fecharMenu()">Introdução</a>
+            <a href="#html-basico" onclick="fecharMenu()">HTML Básico</a>
+            <a href="#html-estrutura" onclick="fecharMenu()">Estrutura HTML</a>
+            <a href="#html-tags" onclick="fecharMenu()">Tags Principais</a>
+            <a href="#css-basico" onclick="fecharMenu()">CSS Básico</a>
+            <a href="#css-seletores" onclick="fecharMenu()">Seletores CSS</a>
+            <a href="#css-propriedades" onclick="fecharMenu()">Propriedades CSS</a>
+            <a href="#css-layout" onclick="fecharMenu()">Layout e Posicionamento</a>
+            <a href="#recursos" onclick="fecharMenu()">Recursos Externos</a>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            
+            <!-- SEÇÃO 0: COMO COMEÇAR -->
+            <section id="comecar" class="secao">
+                <h2>🚀 Como Começar</h2>
+                
+                <h3>1. Criando um Projeto no VSCode</h3>
+                <p>Vamos criar seu primeiro projeto passo a passo:</p>
+                <ol class="lista-explicacao">
+                    <li>Abra o <strong>Visual Studio Code (VSCode)</strong></li>
+                    <li>Clique em <strong>Arquivo</strong> → <strong>Abrir Pasta</strong> (ou pressione <code>Ctrl + O</code>)</li>
+                    <li>Crie uma nova pasta para seu projeto (ex: "meu-projeto")</li>
+                    <li>Selecione a pasta e clique em <strong>Selecionar Pasta</strong></li>
+                    <li>Pronto! Agora você está com seu projeto aberto no VSCode!</li>
+                </ol>
+
+                <h3>2. Criando seu Primeiro Arquivo HTML</h3>
+                <p>No VSCode, vamos criar um arquivo HTML:</p>
+                <ol class="lista-explicacao">
+                    <li>Clique com o botão direito na pasta do projeto (no painel esquerdo)</li>
+                    <li>Selecione <strong>Novo Arquivo</strong></li>
+                    <li>Digite o nome do arquivo: <code>index.html</code></li>
+                    <li>Pressione <strong>Enter</strong></li>
+                </ol>
+
+                <h3>3. Usando o Atalho "!" para Gerar HTML Inicial</h3>
+                <p>O VSCode tem um atalho incrível que gera a estrutura básica do HTML automaticamente!</p>
+                
+                <div class="caixa-dica">
+                    <img src="memoji-dica.webp" alt="Dica" class="memoji-dica">
+                    <p>💡 <strong>Dica Super Importante:</strong> No arquivo <code>index.html</code>, simplesmente digite <code>!</code> e pressione <strong>Tab</strong> ou <strong>Enter</strong>!</p>
+                </div>
+
+                <p>Isso vai gerar automaticamente esta estrutura:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h3>4. Alterando para Português (pt-BR)</h3>
+                <p>O código gerado vem com <code>lang="en"</code> (inglês). Vamos mudar para português:</p>
+                
+                <div class="caixa-atencao">
+                    <p>⚠️ <strong>Atenção:</strong> Sempre altere o <code>lang</code> de <code>"en"</code> para <code>"pt-BR"</code> quando criar páginas em português!</p>
+                </div>
+
+                <p>Procure esta linha:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;html lang="en"&gt;</code></pre>
+                </div>
+
+                <p>E altere para:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;html lang="pt-BR"&gt;</code></pre>
+                </div>
+
+                <h3>5. Estrutura Básica Completa</h3>
+                <p>Aqui está a estrutura básica completa de um documento HTML em português:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Título da Minha Página&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Olá, Mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é meu primeiro parágrafo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h3>Explicação Rápida:</h3>
+                <ul class="lista-explicacao">
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - Diz ao navegador que é HTML5</li>
+                    <li><code>&lt;html lang="pt-BR"&gt;</code> - Tag raiz com idioma português do Brasil</li>
+                    <li><code>&lt;head&gt;</code> - Informações sobre a página (não aparece na tela)</li>
+                    <li><code>&lt;meta charset="UTF-8"&gt;</code> - Permite usar acentos e caracteres especiais</li>
+                    <li><code>&lt;title&gt;</code> - Título que aparece na aba do navegador</li>
+                    <li><code>&lt;body&gt;</code> - Todo o conteúdo visível da página vai aqui</li>
+                </ul>
+
+                <div class="caixa-info">
+                    <p><strong>Pronto!</strong> Agora você já sabe como criar um projeto e começar a escrever HTML. Vamos continuar aprendendo! 🎉</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 1: INTRODUÇÃO -->
+            <section id="introducao" class="secao">
+                <h2>🎯 Introdução</h2>
+                <div class="caixa-info">
+                    <p><strong>Bem-vindos à apostila de HTML e CSS!</strong></p>
+                    <p>Nesta apostila, você vai aprender tudo que usamos para criar a página da "Carta de Presentes". Vamos do básico ao avançado, passo a passo!</p>
+                </div>
+                
+                <h3>O que é HTML?</h3>
+                <p>HTML significa <strong>HyperText Markup Language</strong> (Linguagem de Marcação de Hipertexto). É como o esqueleto da página - define a estrutura e o conteúdo.</p>
+                
+                <div class="exemplo-codigo">
+                    <p class="titulo-exemplo">Exemplo:</p>
+                    <pre><code class="language-html">&lt;h1&gt;Meu Título&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo&lt;/p&gt;</code></pre>
+                </div>
+
+                <h3>O que é CSS?</h3>
+                <p>CSS significa <strong>Cascading Style Sheets</strong> (Folhas de Estilo em Cascata). É como a roupa da página - define cores, tamanhos, posições e tudo que deixa a página bonita!</p>
+                
+                <div class="exemplo-codigo">
+                    <p class="titulo-exemplo">Exemplo:</p>
+                    <pre><code class="language-css">h1 {
+    color: blue;
+    font-size: 24px;
+}</code></pre>
+                </div>
+
+                <div class="caixa-dica">
+                    <img src="memoji-dica.webp" alt="Dica" class="memoji-dica">
+                    <p>💡 <strong>Dica:</strong> Pense no HTML como a estrutura de uma casa e o CSS como a decoração!</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 2: HTML BÁSICO -->
+            <section id="html-basico" class="secao">
+                <h2>📝 HTML Básico</h2>
+                
+                <h3>O que são Tags?</h3>
+                <p>Tags são palavras especiais entre <code>&lt; &gt;</code> que dizem ao navegador o que fazer. A maioria das tags tem uma de abertura e uma de fechamento:</p>
+                
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;tag&gt;conteúdo aqui&lt;/tag&gt;</code></pre>
+                </div>
+
+                <h3>Tags Mais Importantes</h3>
+                <ul class="lista-tags">
+                    <li><code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code> - Títulos (h1 é o maior, h6 o menor)</li>
+                    <li><code>&lt;p&gt;</code> - Parágrafo de texto</li>
+                    <li><code>&lt;strong&gt;</code> - Texto em negrito</li>
+                    <li><code>&lt;em&gt;</code> - Texto em itálico</li>
+                    <li><code>&lt;br&gt;</code> - Quebra de linha (não precisa fechar)</li>
+                    <li><code>&lt;img&gt;</code> - Imagem (não precisa fechar)</li>
+                    <li><code>&lt;a&gt;</code> - Link</li>
+                    <li><code>&lt;ul&gt;</code> e <code>&lt;li&gt;</code> - Lista não ordenada</li>
+                    <li><code>&lt;div&gt;</code> - Container genérico</li>
+                    <li><code>&lt;span&gt;</code> - Container pequeno para texto</li>
+                </ul>
+
+                <div class="exemplo-pratico">
+                    <h4>Exemplo Prático:</h4>
+                    <div class="codigo-resultado">
+                        <div class="codigo">
+                            <p class="titulo-exemplo">Código HTML:</p>
+                            <pre><code class="language-html">&lt;h1&gt;Meu Título Principal&lt;/h1&gt;
+&lt;p&gt;Este é um parágrafo com texto &lt;strong&gt;importante&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Este parágrafo tem uma &lt;em&gt;ênfase&lt;/em&gt;.&lt;/p&gt;</code></pre>
+                        </div>
+                        <div class="resultado">
+                            <p class="titulo-exemplo">Resultado:</p>
+                            <div class="demo">
+                                <h1 style="font-size: 1.5em; margin: 10px 0;">Meu Título Principal</h1>
+                                <p>Este é um parágrafo com texto <strong>importante</strong>.</p>
+                                <p>Este parágrafo tem uma <em>ênfase</em>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 3: ESTRUTURA HTML -->
+            <section id="html-estrutura" class="secao">
+                <h2>🏗️ Estrutura de um Documento HTML</h2>
+                
+                <p>Toda página HTML precisa ter uma estrutura básica. Vamos ver cada parte:</p>
+
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Título da Página&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Todo o conteúdo da página vai aqui --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
+
+                <h3>Explicação das Partes:</h3>
+                <ul class="lista-explicacao">
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - Diz ao navegador que é HTML5</li>
+                    <li><code>&lt;html&gt;</code> - Tag raiz, envolve tudo</li>
+                    <li><code>&lt;head&gt;</code> - Informações sobre a página (não aparece na tela)</li>
+                    <li><code>&lt;meta charset="UTF-8"&gt;</code> - Define a codificação de caracteres</li>
+                    <li><code>&lt;title&gt;</code> - Título que aparece na aba do navegador</li>
+                    <li><code>&lt;link rel="stylesheet"&gt;</code> - Conecta o arquivo CSS</li>
+                    <li><code>&lt;body&gt;</code> - Todo o conteúdo visível da página</li>
+                </ul>
+
+                <div class="caixa-atencao">
+                    <p>⚠️ <strong>Atenção:</strong> Sempre comece seu HTML com essa estrutura básica!</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 4: TAGS PRINCIPAIS -->
+            <section id="html-tags" class="secao">
+                <h2>🏷️ Tags Principais que Usamos</h2>
+
+                <h3>1. Cabeçalho - &lt;header&gt;</h3>
+                <p>Usado para o topo da página, geralmente com o título principal.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Olá, Padrinhos!&lt;/h1&gt;
+&lt;/header&gt;</code></pre>
+                </div>
+
+                <h3>2. Conteúdo Principal - &lt;main&gt;</h3>
+                <p>Envolve o conteúdo principal da página.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;main&gt;
+    &lt;p&gt;Conteúdo principal aqui&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+                </div>
+
+                <h3>3. Seções - &lt;section&gt;</h3>
+                <p>Divide o conteúdo em seções temáticas.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;section class="texto-section"&gt;
+    &lt;h2&gt;Queridos Padrinhos&lt;/h2&gt;
+    &lt;p&gt;Texto da seção&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                </div>
+
+                <h3>4. Rodapé - &lt;footer&gt;</h3>
+                <p>Usado para informações no final da página.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;footer&gt;
+    &lt;p&gt;Informações do projeto&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+
+                <h3>5. Imagens - &lt;img&gt;</h3>
+                <p>Para adicionar imagens. Precisa do atributo <code>src</code> (caminho da imagem) e <code>alt</code> (texto alternativo).</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;img src="foto-crianca.jpeg" alt="Foto da criança"&gt;</code></pre>
+                </div>
+
+                <h3>6. Listas - &lt;ul&gt; e &lt;li&gt;</h3>
+                <p>Para criar listas não ordenadas (com bolinhas).</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                </div>
+
+                <h3>7. Container - &lt;div&gt;</h3>
+                <p>Uma caixa genérica para agrupar elementos. Muito usado com CSS!</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;div class="container"&gt;
+    &lt;p&gt;Conteúdo dentro do container&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+
+                <div class="caixa-dica">
+                    <img src="memoji-dica.webp" alt="Dica" class="memoji-dica">
+                    <p>💡 <strong>Dica:</strong> Use <code>class</code> para dar nomes aos elementos e poder estilizá-los depois com CSS!</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 5: CSS BÁSICO -->
+            <section id="css-basico" class="secao">
+                <h2>🎨 CSS Básico</h2>
+
+                <h3>O que é CSS?</h3>
+                <p>CSS é usado para deixar a página bonita! Você pode mudar cores, tamanhos, posições e muito mais.</p>
+
+                <h3>Como Conectar CSS ao HTML?</h3>
+                <p>No <code>&lt;head&gt;</code> do HTML, adicione:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                </div>
+
+                <h3>Estrutura de uma Regra CSS</h3>
+                <p>Uma regra CSS tem 3 partes:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">seletor {
+    propriedade: valor;
+    outra-propriedade: outro-valor;
+}</code></pre>
+                </div>
+
+                <ul class="lista-explicacao">
+                    <li><strong>Seletor:</strong> Qual elemento você quer estilizar (ex: h1, p, .classe)</li>
+                    <li><strong>Propriedade:</strong> O que você quer mudar (ex: color, font-size)</li>
+                    <li><strong>Valor:</strong> Como você quer mudar (ex: blue, 20px)</li>
+                </ul>
+
+                <div class="exemplo-pratico">
+                    <h4>Exemplo Prático:</h4>
+                    <div class="codigo-resultado">
+                        <div class="codigo">
+                            <p class="titulo-exemplo">CSS:</p>
+                            <pre><code class="language-css">h1 {
+    color: blue;
+    font-size: 32px;
+    text-align: center;
+}</code></pre>
+                        </div>
+                        <div class="resultado">
+                            <p class="titulo-exemplo">Resultado:</p>
+                            <div class="demo">
+                                <h1 style="color: blue; font-size: 1.5em; text-align: center; margin: 10px 0;">Título Azul e Centralizado</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 6: SELETORES CSS -->
+            <section id="css-seletores" class="secao">
+                <h2>🎯 Seletores CSS</h2>
+
+                <p>O seletor diz ao CSS qual elemento você quer estilizar. Existem vários tipos:</p>
+
+                <h3>1. Seletor de Tag</h3>
+                <p>Estiliza todos os elementos daquela tag.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">p {
+    color: red;
+}
+/* Todos os parágrafos ficam vermelhos */</code></pre>
+                </div>
+
+                <h3>2. Seletor de Classe</h3>
+                <p>Estiliza elementos com uma classe específica. Use um ponto (.) antes do nome.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">.container {
+    padding: 20px;
+}
+/* Estiliza elementos com class="container" */</code></pre>
+                </div>
+
+                <h3>3. Seletor de ID</h3>
+                <p>Estiliza um elemento específico com um ID. Use # antes do nome.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">#introducao {
+    background-color: yellow;
+}
+/* Estiliza o elemento com id="introducao" */</code></pre>
+                </div>
+
+                <h3>4. Seletor Descendente</h3>
+                <p>Estiliza elementos dentro de outros elementos.</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">header h1 {
+    color: white;
+}
+/* Estiliza h1 que está dentro de header */</code></pre>
+                </div>
+
+                <div class="caixa-dica">
+                    <img src="memoji-dica.webp" alt="Dica" class="memoji-dica">
+                    <p>💡 <strong>Dica:</strong> Classes são mais usadas que IDs. Use classes quando vários elementos precisam do mesmo estilo!</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 7: PROPRIEDADES CSS -->
+            <section id="css-propriedades" class="secao">
+                <h2>✨ Propriedades CSS Importantes</h2>
+
+                <h3>Cores</h3>
+                <p>Você pode usar nomes de cores ou códigos hexadecimais:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">color: blue;           /* Nome da cor */
+color: #4a90e2;        /* Código hexadecimal */
+color: rgb(74, 144, 226); /* RGB */</code></pre>
+                </div>
+
+                <div class="color-picker-container">
+                    <h4>🎨 Seletor de Cores Interativo</h4>
+                    <p>Selecione uma cor abaixo e veja o código hexadecimal:</p>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="colorPicker" value="#4a90e2" class="color-input">
+                        <div class="color-display">
+                            <div class="color-preview" id="colorPreview"></div>
+                            <div class="color-code">
+                                <label>Código Hexadecimal:</label>
+                                <code id="hexCode">#4a90e2</code>
+                                <button onclick="copiarCodigo()" class="btn-copiar">Copiar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Fonte</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">font-family: Arial, sans-serif;  /* Tipo de fonte */
+font-size: 18px;                /* Tamanho */
+font-weight: bold;              /* Negrito */
+font-style: italic;             /* Itálico */</code></pre>
+                </div>
+
+                <h3>Espaçamento</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">padding: 20px;     /* Espaço interno */
+margin: 10px;      /* Espaço externo */
+margin-top: 15px;  /* Margem só em cima */
+padding-left: 10px; /* Padding só à esquerda */</code></pre>
+                </div>
+
+                <h3>Bordas</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">border: 2px solid black;        /* Borda completa */
+border-left: 4px solid blue;   /* Borda só à esquerda */
+border-radius: 5px;            /* Cantos arredondados */
+border-radius: 50%;             /* Círculo perfeito */</code></pre>
+                </div>
+
+                <h3>Fundo</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">background-color: #f5f5f5;  /* Cor de fundo */
+background-color: white;     /* Branco */</code></pre>
+                </div>
+
+                <h3>Alinhamento de Texto</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">text-align: center;   /* Centralizado */
+text-align: left;     /* À esquerda */
+text-align: right;    /* À direita */
+text-align: justify;  /* Justificado */</code></pre>
+                </div>
+
+                <h3>Largura e Altura</h3>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">width: 200px;        /* Largura fixa */
+height: 100px;       /* Altura fixa */
+max-width: 800px;    /* Largura máxima */
+height: auto;        /* Altura automática */</code></pre>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 8: LAYOUT E POSICIONAMENTO -->
+            <section id="css-layout" class="secao">
+                <h2>📐 Layout e Posicionamento</h2>
+
+                <h3>Centralizando Conteúdo</h3>
+                <p>Para centralizar um elemento horizontalmente, use:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}</code></pre>
+                </div>
+                <ul class="lista-explicacao">
+                    <li><code>max-width</code> - Define largura máxima</li>
+                    <li><code>margin: 0 auto</code> - Centraliza horizontalmente (0 em cima/baixo, auto nas laterais)</li>
+                    <li><code>padding</code> - Espaço interno</li>
+                </ul>
+
+                <h3>Box Model</h3>
+                <p>Todo elemento HTML é uma caixa com 4 partes. Veja a visualização abaixo:</p>
+                
+                <div class="box-model-container">
+                    <div class="box-model-visual">
+                        <div class="box-margin-layer" id="box-margin" onmouseenter="highlightBox('margin')" onmouseleave="unhighlightBox('margin')">
+                            <div class="box-border-layer" id="box-border" onmouseenter="highlightBox('border')" onmouseleave="unhighlightBox('border')">
+                                <div class="box-padding-layer" id="box-padding" onmouseenter="highlightBox('padding')" onmouseleave="unhighlightBox('padding')">
+                                    <div class="box-content-layer" id="box-content" onmouseenter="highlightBox('content')" onmouseleave="unhighlightBox('content')">
+                                        CONTEÚDO
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-model-legend">
+                        <h4>Legenda:</h4>
+                        <div class="legend-item" id="legend-margin">
+                            <div class="legend-color legend-margin"></div>
+                            <div class="legend-text">
+                                <strong>MARGIN</strong>
+                                <small>Espaço externo (verde tracejado)</small>
+                            </div>
+                        </div>
+                        <div class="legend-item" id="legend-border">
+                            <div class="legend-color legend-border"></div>
+                            <div class="legend-text">
+                                <strong>BORDER</strong>
+                                <small>Borda (laranja sólido)</small>
+                            </div>
+                        </div>
+                        <div class="legend-item" id="legend-padding">
+                            <div class="legend-color legend-padding"></div>
+                            <div class="legend-text">
+                                <strong>PADDING</strong>
+                                <small>Espaço interno (azul tracejado)</small>
+                            </div>
+                        </div>
+                        <div class="legend-item" id="legend-content">
+                            <div class="legend-color legend-content"></div>
+                            <div class="legend-text">
+                                <strong>CONTENT</strong>
+                                <small>Conteúdo (azul escuro)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">div {
+    padding: 20px;      /* Espaço interno */
+    border: 2px solid;  /* Borda */
+    margin: 10px;       /* Espaço externo */
+}</code></pre>
+                </div>
+
+                <h3>Display</h3>
+                <p>Controla como o elemento é exibido:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">display: block;      /* Ocupa toda a largura */
+display: inline;     /* Fica na mesma linha */
+display: inline-block; /* Mistura dos dois */
+display: none;       /* Esconde o elemento */</code></pre>
+                </div>
+
+                <h3>Efeitos Hover</h3>
+                <p>Muda o estilo quando o mouse passa por cima:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">.botao {
+    background-color: blue;
+}
+
+.botao:hover {
+    background-color: darkblue;
+    transform: translateX(5px);
+}</code></pre>
+                </div>
+
+                <div class="caixa-dica">
+                    <img src="memoji-dica.webp" alt="Dica" class="memoji-dica">
+                    <p>💡 <strong>Dica:</strong> O <code>:hover</code> deixa a página mais interativa e divertida!</p>
+                </div>
+            </section>
+
+            <!-- SEÇÃO 9: PRÁTICA -->
+            <section id="pratica" class="secao">
+                <h2>🚀 Como Construímos Nossa Página</h2>
+
+                <h3>Passo 1: Estrutura HTML</h3>
+                <p>Primeiro, criamos a estrutura básica com header, main e footer:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;header&gt;
+    &lt;h1&gt;Olá, Padrinhos!&lt;/h1&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- Conteúdo aqui --&gt;
+    &lt;/div&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;!-- Rodapé aqui --&gt;
+&lt;/footer&gt;</code></pre>
+                </div>
+
+                <h3>Passo 2: Adicionando Conteúdo</h3>
+                <p>Depois, adicionamos seções com texto, imagens e listas:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-html">&lt;section class="foto-section"&gt;
+    &lt;img src="foto-crianca.jpeg" alt="Foto"&gt;
+&lt;/section&gt;
+
+&lt;section class="texto-section"&gt;
+    &lt;h2&gt;Queridos Padrinhos&lt;/h2&gt;
+    &lt;p&gt;Texto aqui...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+                </div>
+
+                <h3>Passo 3: Estilizando com CSS</h3>
+                <p>Por fim, adicionamos estilos para deixar bonito:</p>
+                <div class="exemplo-codigo">
+                    <pre><code class="language-css">/* Centralizar conteúdo */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilizar cabeçalho */
+header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+/* Estilizar foto */
+.foto-principal {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #4a90e2;
+}</code></pre>
+                </div>
+
+                <h3>Conceitos que Usamos:</h3>
+                <ul class="lista-conceitos">
+                    <li>✅ Estrutura HTML semântica (header, main, footer, section)</li>
+                    <li>✅ Classes para organizar elementos</li>
+                    <li>✅ Container com max-width e margin auto para centralizar</li>
+                    <li>✅ Padding para espaçamento interno</li>
+                    <li>✅ Cores hexadecimais (#4a90e2)</li>
+                    <li>✅ Border-radius para cantos arredondados</li>
+                    <li>✅ Hover para interatividade</li>
+                    <li>✅ Seletores descendentes (header h1)</li>
+                    <li>✅ Text-align para alinhamento</li>
+                </ul>
+
+            </section>
+
+            <!-- SEÇÃO: RECURSOS EXTERNOS -->
+            <section id="recursos" class="secao">
+                <h2>🔗 Recursos Externos</h2>
+                <p>Aqui estão alguns recursos incríveis para você continuar aprendendo e praticando:</p>
+                
+                <div class="recursos-grid">
+                    <div class="recurso-card">
+                        <h3>📖 MDN Web Docs</h3>
+                        <p>A documentação oficial e mais completa sobre HTML e CSS. Perfeita para consultar quando tiver dúvidas!</p>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Acessar MDN HTML →
+                        </a>
+                        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Acessar MDN CSS →
+                        </a>
+                    </div>
+
+                    <div class="recurso-card">
+                        <h3>🎨 CodePen</h3>
+                        <p>Uma plataforma onde você pode criar e compartilhar seus códigos HTML/CSS/JS. Veja exemplos incríveis!</p>
+                        <a href="https://codepen.io/explore" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Explorar CodePen →
+                        </a>
+                    </div>
+
+                    <div class="recurso-card">
+                        <h3>🎓 W3Schools</h3>
+                        <p>Tutoriais interativos e exemplos práticos. Ótimo para aprender passo a passo!</p>
+                        <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            HTML W3Schools →
+                        </a>
+                        <a href="https://www.w3schools.com/css/" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            CSS W3Schools →
+                        </a>
+                    </div>
+
+                    <div class="recurso-card">
+                        <h3>🎨 CSS-Tricks</h3>
+                        <p>Dicas, truques e tutoriais avançados de CSS. Para quando quiser ir além do básico!</p>
+                        <a href="https://css-tricks.com/" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Visitar CSS-Tricks →
+                        </a>
+                    </div>
+
+                    <div class="recurso-card">
+                        <h3>🌈 Coolors</h3>
+                        <p>Gerador de paletas de cores incríveis! Perfeito para escolher cores harmoniosas para seus projetos.</p>
+                        <a href="https://coolors.co/" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Gerar Paletas →
+                        </a>
+                    </div>
+
+                    <div class="recurso-card">
+                        <h3>💻 Codecademy</h3>
+                        <p>Cursos interativos de programação. Tem cursos gratuitos de HTML e CSS!</p>
+                        <a href="https://www.codecademy.com/learn/learn-html" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Curso HTML →
+                        </a>
+                        <a href="https://www.codecademy.com/learn/learn-css" target="_blank" rel="noopener noreferrer" class="btn-recurso">
+                            Curso CSS →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="caixa-info">
+                    <p><strong>💡 Dica:</strong> Explore esses recursos aos poucos. Não precisa aprender tudo de uma vez! O importante é praticar e se divertir enquanto aprende! 🚀</p>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Apostila criada para o projeto IGT - 2025</p>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante para voltar ao topo -->
+    <button id="btnTopo" class="btn-topo" onclick="voltarAoTopo()" title="Voltar ao topo">
+        ↑
+    </button>
+
+    <script>
+        // Color Picker Interativo
+        const colorPicker = document.getElementById('colorPicker');
+        const colorPreview = document.getElementById('colorPreview');
+        const hexCode = document.getElementById('hexCode');
+
+        colorPicker.addEventListener('input', function(e) {
+            const selectedColor = e.target.value;
+            colorPreview.style.backgroundColor = selectedColor;
+            hexCode.textContent = selectedColor.toUpperCase();
+        });
+
+        // Inicializar preview
+        colorPreview.style.backgroundColor = colorPicker.value;
+        hexCode.textContent = colorPicker.value.toUpperCase();
+
+        function copiarCodigo() {
+            const codigo = hexCode.textContent;
+            navigator.clipboard.writeText(codigo).then(function() {
+                const btn = document.querySelector('.btn-copiar');
+                const textoOriginal = btn.textContent;
+                btn.textContent = 'Copiado!';
+                btn.style.backgroundColor = '#28a745';
+                setTimeout(function() {
+                    btn.textContent = textoOriginal;
+                    btn.style.backgroundColor = '#4a90e2';
+                }, 2000);
+            });
+        }
+
+        // Botão voltar ao topo
+        function voltarAoTopo() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mostrar/ocultar botão ao rolar a página
+        window.addEventListener('scroll', function() {
+            const btnTopo = document.getElementById('btnTopo');
+            if (window.pageYOffset > 300) {
+                btnTopo.style.display = 'flex';
+            } else {
+                btnTopo.style.display = 'none';
+            }
+        });
+
+        // Efeito hover no Box Model
+        function highlightBox(type) {
+            const box = document.getElementById('box-' + type);
+            const legend = document.getElementById('legend-' + type);
+            
+            box.classList.add('box-hover');
+            legend.classList.add('legend-hover');
+        }
+
+        function unhighlightBox(type) {
+            const box = document.getElementById('box-' + type);
+            const legend = document.getElementById('legend-' + type);
+            
+            box.classList.remove('box-hover');
+            legend.classList.remove('legend-hover');
+        }
+
+        // Animações de transição suaves ao rolar
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('secao-visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observar todas as seções
+        document.querySelectorAll('.secao').forEach(secao => {
+            observer.observe(secao);
+        });
+
+        // Mostrar primeira seção imediatamente
+        const primeiraSecao = document.querySelector('.secao');
+        if (primeiraSecao) {
+            primeiraSecao.classList.add('secao-visible');
+        }
+
+        // Menu hambúrguer
+        function toggleMenu() {
+            const menu = document.getElementById('menuNav');
+            const botao = document.getElementById('menuToggle');
+            
+            const estaAberto = menu.classList.contains('menu-aberto');
+            
+            if (estaAberto) {
+                // Fechar menu
+                fecharMenu();
+            } else {
+                // Abrir menu
+            // Se estiver em desktop mas com hambúrguer ativo (menu não cabe ou tela < 1800px)
+            if (window.innerWidth < 1800 && botao.classList.contains('ativo-desktop')) {
+                menu.style.display = 'flex';
+                menu.style.position = 'fixed';
+                menu.style.top = '80px';
+                menu.style.left = '1%';
+                menu.style.right = '1%';
+                menu.style.width = '98%';
+                menu.style.flexDirection = 'column';
+            }
+                
+                menu.classList.add('menu-aberto');
+                botao.classList.add('ativo');
+            }
+        }
+
+        function fecharMenu() {
+            const menu = document.getElementById('menuNav');
+            const botao = document.getElementById('menuToggle');
+            
+            if (!menu || !botao) return;
+            
+            menu.classList.remove('menu-aberto');
+            botao.classList.remove('ativo');
+            
+            // Se estiver em desktop com hambúrguer ativo, resetar estilos
+            if (window.innerWidth < 1800 && botao.classList.contains('ativo-desktop')) {
+                menu.style.display = 'none';
+                menu.style.position = '';
+                menu.style.top = '';
+                menu.style.left = '';
+                menu.style.right = '';
+                menu.style.maxWidth = '';
+                menu.style.width = '';
+                menu.style.flexDirection = '';
+            }
+        }
+        
+        // Adicionar event listeners aos links do menu para garantir que fechem
+        document.addEventListener('DOMContentLoaded', function() {
+            const linksMenu = document.querySelectorAll('#menuNav a');
+            linksMenu.forEach(link => {
+                link.addEventListener('click', function() {
+                    setTimeout(fecharMenu, 100);
+                });
+            });
+        });
+
+        // Fechar menu ao clicar fora
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('menuNav');
+            const botao = document.getElementById('menuToggle');
+            const container = document.querySelector('.menu-container');
+            
+            if ((window.innerWidth < 1800 || botao.classList.contains('ativo-desktop')) && 
+                !container.contains(event.target) && 
+                menu.classList.contains('menu-aberto')) {
+                fecharMenu();
+            }
+        });
+
+        // Detectar tamanho da tela e mostrar hambúrguer se necessário
+        function verificarTamanhoMenu() {
+            const menu = document.getElementById('menuNav');
+            const hamburguer = document.getElementById('menuToggle');
+            
+            if (window.innerWidth >= 1800) {
+                // Telas grandes (>= 1800px): menu horizontal normal
+                hamburguer.style.display = 'none';
+                hamburguer.classList.remove('ativo-desktop');
+                menu.style.display = 'flex';
+                menu.style.position = 'static';
+                menu.style.maxHeight = 'none';
+                menu.style.opacity = '1';
+                menu.style.visibility = 'visible';
+                menu.classList.remove('menu-aberto');
+            } else {
+                // Telas menores que 1800px: sempre usar hambúrguer
+                hamburguer.style.display = 'flex';
+                hamburguer.classList.add('ativo-desktop');
+                menu.style.display = 'none';
+                menu.classList.remove('menu-aberto');
+            }
+        }
+
+        // Verificar ao carregar e ao redimensionar
+        window.addEventListener('load', function() {
+            setTimeout(verificarTamanhoMenu, 200);
+        });
+        window.addEventListener('resize', function() {
+            setTimeout(verificarTamanhoMenu, 100);
+        });
+        
+        // Verificar após um pequeno delay para garantir que o CSS foi aplicado
+        setTimeout(verificarTamanhoMenu, 300);
+    </script>
+</body>
+</html>
+
